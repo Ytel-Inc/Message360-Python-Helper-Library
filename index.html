@@ -47,7 +47,25 @@
 
 <p><strong>Example:</strong></p>
 
-<div class="highlight highlight-source-python"><pre>python example</pre></div>
+<div class="highlight highlight-source-python"><pre><span class="pl-k">import</span> YtelAPI
+<span class="pl-k">import</span> YtelConstant
+
+message360Credential <span class="pl-k">=</span> YtelAPI.Message360API(<span class="pl-smi">auth_id</span><span class="pl-k">=</span>YtelConstant.Constant.ACCOUNT_SID,<span class="pl-smi">auth_token</span><span class="pl-k">=</span>YtelConstant.Constant.AUTH_TOKEN)
+
+
+params <span class="pl-k">=</span> {
+          <span class="pl-s"><span class="pl-pds">'</span>body<span class="pl-pds">'</span></span>:<span class="pl-s"><span class="pl-pds">'</span>X<span class="pl-pds">'</span></span>,
+          <span class="pl-s"><span class="pl-pds">'</span>to<span class="pl-pds">'</span></span>:<span class="pl-s"><span class="pl-pds">'</span>XXXXXXXXXX<span class="pl-pds">'</span></span>,
+          <span class="pl-s"><span class="pl-pds">'</span>from<span class="pl-pds">'</span></span>:<span class="pl-s"><span class="pl-pds">'</span>XXXXXXXXXX<span class="pl-pds">'</span></span>,
+          <span class="pl-s"><span class="pl-pds">'</span>fromcountrycode<span class="pl-pds">'</span></span>:<span class="pl-s"><span class="pl-pds">'</span>X<span class="pl-pds">'</span></span>,
+          <span class="pl-s"><span class="pl-pds">'</span>tocountrycode<span class="pl-pds">'</span></span>:<span class="pl-s"><span class="pl-pds">'</span>X<span class="pl-pds">'</span></span>
+          <span class="pl-c">#'messagestatuscallback':'X',</span>
+          <span class="pl-c">#'method':'POST',#POST,'#GET'</span>
+}
+
+response <span class="pl-k">=</span> message360Credential.send_sms(params)
+
+<span class="pl-k">print</span> response</pre></div>
 
 <p>An account for Message360 is free to sign up for at <a href="https://api.message360.com">https://api.message360.com</a></p>
 
