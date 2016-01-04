@@ -5,8 +5,26 @@
 ### Welcome to the Message360 Python Helper Library
 This is home to the Official Python Message360 REST API. 
 
-```
-Sample Code Here
+```Python
+import YtelAPI
+import YtelConstant
+
+message360Credential = YtelAPI.Message360API(auth_id=YtelConstant.Constant.ACCOUNT_SID,auth_token=YtelConstant.Constant.AUTH_TOKEN)
+
+
+params = {
+          'body':'X',
+          'to':'XXXXXXXXXX',
+          'from':'XXXXXXXXXX',
+	  'fromcountrycode':'X',
+	  'tocountrycode':'X'
+          #'messagestatuscallback':'X',
+          #'method':'POST',#POST,'#GET'
+}
+
+response = message360Credential.send_sms(params)
+
+print response
 ```
 
 An account for Message360 is free to sign up for at [https://api.message360.com](https://api.message360.com)
