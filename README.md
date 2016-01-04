@@ -16,8 +16,8 @@ params = {
           'body':'X',
           'to':'XXXXXXXXXX',
           'from':'XXXXXXXXXX',
-	'fromcountrycode':'X',
-	'tocountrycode':'X'
+          'fromcountrycode':'X',
+          'tocountrycode':'X'
           #'messagestatuscallback':'X',
           #'method':'POST',#POST,'#GET'
 }
